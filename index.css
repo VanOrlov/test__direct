@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: teal;
+    color: black;
+    border: 2px solid green;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: green;
+    color: white;
+    transition: color .2s ease;
+}
+
+.btn:active{
+    border: 2px solid black
+}
+
+.btn::after{
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 3px solid black;
+    border-top: 3px solid transparent;
+    margin-left: 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
