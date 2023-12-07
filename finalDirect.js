@@ -30,7 +30,7 @@ function agency() {
 
   return new Promise((resolve, reject) => {
     axios
-      .post("http://api.direct.yandex.ru/json/v5/agencyclients", requestBody, {
+      .post("https://api.direct.yandex.ru/json/v5/agencyclients", requestBody, {
         headers,
       })
       .then((response) => {
@@ -78,7 +78,7 @@ function accmanager(arr) {
   
     return new Promise((resolve, reject) => {
       axios
-        .post("http://api.direct.yandex.ru/live/v4/json/", requestBody, {
+        .post("https://api.direct.yandex.ru/live/v4/json/", requestBody, {
           headers,
         })
         .then((response) => {
